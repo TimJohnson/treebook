@@ -47,7 +47,7 @@ class StatusesController < ApplicationController
         format.html { redirect_to @status, notice: 'Status was successfully created.' }
         format.json { render json: @status, status: :created, location: @status }
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @status.errors, status: :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class StatusesController < ApplicationController
         format.html { redirect_to @status, notice: 'Status was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @status.errors, status: :unprocessable_entity }
       end
     end
